@@ -1,0 +1,268 @@
+:root {
+  --body: #1C1E53;
+  --primary: #5E3BEE;
+  --BG-Shade: #F5FCFF;
+  --Heading-color: #282938;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  padding-top: 5rem;
+}
+
+header {
+  background-color: #FFF;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0rem 5rem;
+  align-items: center;
+  flex-shrink: 0;
+  box-shadow: 0px 5.33333px 80px 0px rgba(0, 0, 0, 0.10);
+  color: var(--body)
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--body);
+  font-weight: bold;
+}
+
+
+nav {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.66669rem;
+}
+
+.link {
+  color: var(--body);
+  font-family: Roboto;
+  font-size: 1.33331rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.link:hover {
+  color: var(--primary);
+}
+
+header > button {
+  display: flex;
+  border: 1.333px solid var(--primary);
+  border-radius: 0.33331rem;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  transition: 0.4s;
+}
+
+header > button:hover {
+  display: flex;
+  border: 1.333px solid var(--primary);
+  border-radius: 0.33331rem;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+  color: #FFF;
+}
+
+.introduction {
+  display: flex;
+  width: 100%;
+  padding: 8rem 5rem;
+  height: 90vh;
+  align-items: center;
+  background: var(--BG-Shade);
+}
+
+.nathan {
+  width: 50%;
+  height: 35rem;
+  flex-shrink: 0;
+}
+
+.text-introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+}
+
+.title {
+  color: var(--Heading-color, #282938);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.job {
+  color: var(--Heading-color);
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.job > p {
+  color: var(--primary);
+}
+
+.description {
+  width: 38.83331rem;
+  height: 4.58331rem;
+  color: var(--Body, #1C1E53);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.3rem;
+}
+
+.github, .linkedin {
+  background-color: var(--primary);
+  color: #FFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.experience {
+  display: flex;
+  width: 100%;
+  padding: 8rem 5rem;
+  height: 90vh;
+  flex-direction: column;
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  border-radius: 0.6rem;
+  background: var(--BG-Shade);
+  width: 24%;
+}
+
+.card-title {
+  color: var(--Heading-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%
+}
+
+.card-description {
+  align-self: stretch;
+  color: var(--Body);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.about-me {
+  display: flex;
+  width: 100%;
+  padding: 8rem 5rem;
+  height: 90vh;
+}
+
+.text-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+}
+
+.projects {
+  display: flex;
+  width: 100%;
+  padding: 8rem 5rem;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projects-cards {
+  display: flex;
+  gap: 1rem; 
+  flex-wrap: wrap;
+}
+
+.project-image {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.project-content {
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+}
+
+.project-card {
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  background-color: var(--BG-Shade);
+  display: flex;
+  padding: 2rem 5rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer, .copy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 1rem;
+}
