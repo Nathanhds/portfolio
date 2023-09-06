@@ -21,7 +21,7 @@ export default function Introduction() {
                         </button>
                     </div>
                 </div>
-                <img src="../public/images/sebrae-londrina-284-background-removed-1.svg" alt="Nathan" className="nathan"/>
+                <img src="../dist/images/sebrae-londrina-284-background-removed-1.svg" alt="Nathan" className="nathan"/>
             </section>
     )
 }
