@@ -7,7 +7,7 @@ export default function Projects() {
             </div>
             <div className="projects-cards">
                 <div className="project-card">
-                    <img src="../../public/placeholder-image.svg" alt="" className="project-image"/>
+                    <img src="./placeholder-image.svg" alt="" className="project-image"/>
                     <div className="project-content">
                         <p>Name</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sapiente dicta illo veniam, illum itaque enim voluptate odit mollitia molestias.</p>

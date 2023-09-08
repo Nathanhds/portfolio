@@ -1,7 +1,7 @@
 export default function AboutMe() {
     return (
         <section className="about-me" id="about-me">
-            <img src="../../public/design-sem-nome-1.svg" alt="" className="nathan"/>
+            <img src="./design-sem-nome-1.svg" alt="" className="nathan"/>
             <div className="text-about">
                 <p className="title">Sobre</p>
                 <p className="job">Sobre mim</p>
