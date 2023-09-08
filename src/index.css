@@ -12,23 +12,17 @@
   font-family: 'Roboto', sans-serif;
 }
 
-body {
-  padding-top: 5rem;
-}
-
 header {
   background-color: #FFF;
   justify-content: space-between;
   display: flex;
   width: 100%;
   height: 10vh;
-  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  position: sticky;
   padding: 0rem 5rem;
   align-items: center;
-  flex-shrink: 0;
   box-shadow: 0px 5.33333px 80px 0px rgba(0, 0, 0, 0.10);
   color: var(--body)
 }
@@ -40,14 +34,13 @@ header {
   font-weight: bold;
 }
 
-
 nav {
   display: flex;
   align-items: flex-start;
   gap: 2.66669rem;
 }
 
-.link {
+.link, .link-footer {
   color: var(--body);
   font-family: Roboto;
   font-size: 1.33331rem;
@@ -58,20 +51,27 @@ nav {
   transition: 0.2s;
 }
 
-.link:hover {
+.link:hover, .link-footer:hover {
   color: var(--primary);
 }
 
-header > button {
+.icons {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+}
+
+.contact {
   display: flex;
   border: 1.333px solid var(--primary);
   border-radius: 0.33331rem;
   padding: 1rem 2rem;
   background-color: transparent;
   transition: 0.4s;
+  text-decoration: none;
 }
 
-header > button:hover {
+.contact:hover {
   display: flex;
   border: 1.333px solid var(--primary);
   border-radius: 0.33331rem;
@@ -101,10 +101,12 @@ header > button:hover {
   justify-content: center;
   align-items: flex-start;
   height: auto;
+  width: 100%;
 }
 
 .title {
   color: var(--Heading-color, #282938);
+  width: 100%;
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
@@ -113,6 +115,7 @@ header > button:hover {
 
 .job {
   color: var(--Heading-color);
+  width: 100%;
   font-size: 3.5rem;
   font-style: normal;
   font-weight: 500;
@@ -124,8 +127,7 @@ header > button:hover {
 }
 
 .description {
-  width: 38.83331rem;
-  height: 4.58331rem;
+  width: 100%;
   color: var(--Body, #1C1E53);
   font-size: 1.5rem;
   font-style: normal;
@@ -138,7 +140,8 @@ header > button:hover {
   margin-top: 1.3rem;
 }
 
-.github, .linkedin {
+.link-button {
+  text-decoration: none;
   background-color: var(--primary);
   color: #FFF;
   border: none;
@@ -146,7 +149,7 @@ header > button:hover {
   border-radius: 0.25rem;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 .experience {
@@ -160,7 +163,7 @@ header > button:hover {
 .cards {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .card {
@@ -171,7 +174,7 @@ header > button:hover {
   gap: 2rem;
   border-radius: 0.6rem;
   background: var(--BG-Shade);
-  width: 24%;
+  width: 100%;
 }
 
 .card-title {
@@ -190,11 +193,30 @@ header > button:hover {
   line-height: 130%;
 }
 
+.experience-link {
+  text-decoration: none;
+  color: var(--primary);
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+}
+
+.experience-link:hover {
+  cursor: pointer;
+}
+
+.experience-links {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
 .about-me {
   display: flex;
   width: 100%;
   padding: 8rem 5rem;
   height: 90vh;
+  align-items: center;
 }
 
 .text-about {
@@ -265,4 +287,576 @@ footer {
 .footer-buttons {
   display: flex;
   gap: 1rem;
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.backdrop {
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.backdrop:hover {
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  border-radius: 1rem;
+  background-color: #FFF;
+  width: 50%;
+  height: 70vh;
+  padding: 2rem;
+  z-index: 2;
+  flex-direction: column;
+}
+
+.modal-header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-close {
+  background-color: transparent;
+  border: none;
+}
+
+
+.modal-close:hover {
+  cursor: pointer;
+}
+
+.techs {
+  list-style-type: none;
+  line-height: 1.5;
+  margin-top: 2rem;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.tech {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.levels {
+  font-weight: 300;
+  color: #2829388e;
+}
+@media (max-width:480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .link {
+    display: none;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  .contact{
+    display: none;
+  }
+
+  .nathan {
+    display: none;
+  }
+
+  .introduction {
+    padding: 1rem 2rem;
+  }
+
+  .title {
+    font-size: 0.75rem;
+  }
+  
+  .job {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .experience {
+    padding: 1rem 2rem;
+    height: auto;
+  }
+  
+  .cards {
+    flex-direction: column;
+  }
+  
+  .card {
+    padding: 1rem;
+    gap: 0.5rem;
+    border-radius: 0.6rem;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .about-me {
+    padding: 1rem 2rem;
+  }
+
+  .projects {
+    padding: 1rem 2rem;
+    height: auto;
+  }
+  
+  .projects-cards {
+    flex-direction: column;
+  }
+
+  footer {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  .link {
+    display: none;
+  }
+
+  header {
+    padding: 1.25rem 2.25rem;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  .nathan {
+    display: none;
+  }
+
+  .introduction {
+    padding: 1.25rem 2.25rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+  
+  .job {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .description {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .experience {
+    padding: 1.25rem 2.25rem;
+    height: auto;
+  }
+  
+  .cards {
+    flex-direction: column;
+  }
+  
+  .card {
+    padding: 1.25rem;
+    gap: 0.75rem;
+    border-radius: 0.6rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .about-me {
+    padding: 1.25rem 2.25rem;
+  }
+
+  .projects {
+    padding: 1.25rem 2.25rem;
+    height: auto;
+  }
+  
+  .projects-cards {
+    flex-direction: column;
+  }
+
+  footer {
+    padding: 1.25rem 2.25rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  .link {
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .contact {
+    padding: 1.25rem 2.25rem;
+  }
+
+  .nathan {
+    display: none;
+  }
+
+  .introduction {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+  
+  .job {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .experience {
+    padding: 1.5rem 2.5rem;
+    height: auto;
+  }
+  
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 48%;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: 0.6rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .about-me {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .projects {
+    padding: 1.5rem 2.5rem;
+    height: auto;
+  }
+  
+  .projects-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  footer {
+    padding: 1.5rem 2.5rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .logo {
+    font-size: 2.25rem;
+  }
+
+  .link {
+    font-size: 1.25rem;
+  }
+
+  header {
+    padding: 1.75rem 2.75rem;
+  }
+
+  .contact  {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .introduction {
+    padding: 1.75rem 2.75rem;
+  }
+
+  .nathan {
+    height: 30rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .job {
+    font-size: 2.75rem;
+    margin-bottom: 1.75rem;
+  }
+  
+  .description {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .experience {
+    padding: 1.75rem 2.75rem;
+    height: auto;
+  }
+  
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 48%;
+    padding: 1.75rem;
+    gap: 1rem;
+    border-radius: 0.6rem;
+  }
+  
+  .card-title {
+    font-size: 1.75rem;
+  }
+
+  .about-me {
+    padding: 1.75rem 2.75rem;
+  }
+
+  .projects {
+    padding: 1.75rem 2.75rem;
+    height: auto;
+  }
+  
+  .projects-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  footer {
+    padding: 1.75rem 2.75rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .link {
+    font-size: 1.5rem;
+  }
+
+  header {
+    padding: 2rem 3rem;
+  }
+
+  .contact  {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  .introduction {
+    padding: 2rem 3rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .job {
+    font-size: 2.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .description {
+    font-size: 2rem;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .experience {
+    justify-content: center;
+    padding: 2rem 3rem;
+    height: auto;
+    height: 90vh;
+  }
+  
+  .cards {
+    flex-direction: row;
+  }
+  
+  .card {
+    width: 24%;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 0.6rem;
+  }
+  
+  .card-title {
+    font-size: 1.75rem;
+  }
+
+  .about-me {
+    padding: 2rem 3rem;
+  }
+
+  .projects {
+    padding: 2rem 3rem;
+    height: auto;
+  }
+  
+  .projects-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  footer {
+    padding: 2rem 3rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .logo {
+    font-size: 4rem;
+  }
+
+  .link {
+    font-size: 3rem;
+  }
+
+  header {
+    padding: 5rem 8rem;
+  }
+
+  .contact {
+    padding: 2.5rem 3.5rem;
+    font-size: 3rem;
+  }
+
+  .introduction {
+    padding: 5rem 8rem;
+  }
+
+  .nathan {
+    height: 50rem;
+  }
+
+  .title {
+    font-size: 3.25rem;
+  }
+  
+  .job {
+    font-size: 6.25rem;
+    margin-bottom: 4rem;
+  }
+  
+  .description {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .github, .linkedin {
+    padding: 2.5rem 4rem;
+    border-radius: 1rem;
+    font-size: 3rem;
+  }
+
+  .experience {
+    justify-content: center;
+    padding: 5rem 8rem;
+    height: auto;
+    height: 90vh;
+  }
+  
+  .cards {
+    flex-direction: row;
+  }
+  
+  .card {
+    width: 24%;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 0.6rem;
+  }
+  
+  .card-title {
+    font-size: 3rem;
+  }
+
+  .card-description {
+    font-size: 2.5rem;
+  }
+
+  .about-me {
+    padding: 5rem 8rem;
+  }
+
+  .about-description {
+    font-size: 3rem;
+  }
+
+  .projects {
+    padding: 2rem 3rem;
+    height: auto;
+  }
+  
+  .projects-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  footer {
+    padding: 2rem 3rem;
+  }
 }
