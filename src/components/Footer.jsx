@@ -5,10 +5,10 @@ export default function Footer() {
                 <a href="#" className="logo">Nathan</a>
                 <div className="footer-buttons">
                     <a href="https://github.com/nathanhds" target="_blank" className="link-footer">
-                       <img src="public/github.svg" alt="github-icon" className="icons"/>
+                       <img src="/github.svg" alt="github-icon" className="icons"/>
                     </a>
                     <a href="https://linkedin.com/in/nathanhds" target="_blank" className="link-footer">
-                       <img src="public/linkedin.svg" alt="linkedin-icon" className="icons"/>
+                       <img src="/linkedin.svg" alt="linkedin-icon" className="icons"/>
                        
                     </a>
                 </div>
