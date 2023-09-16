@@ -5,7 +5,7 @@ export default function Experience() {
     const [modalFront, setModalFront] = useState(false)
     return ( 
         
-        <section className="experience">
+        <section className="experience" id="experience">
         {modalFront && (
                 <div>
                     <FrontEnd setModalFront={setModalFront}/>

@@ -12,7 +12,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-header {
+.header {
   background-color: #FFF;
   justify-content: space-between;
   display: flex;
@@ -25,6 +25,114 @@ header {
   align-items: center;
   box-shadow: 0px 5.33333px 80px 0px rgba(0, 0, 0, 0.10);
   color: var(--body)
+}
+
+.mobile-header {
+  background-color: #FFF;
+  gap: 1rem;
+  flex-direction: column;
+  display: none;
+  width: 100%;
+  max-height: 30vh;
+  min-height: 10vh;
+  height: auto;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  padding: 0rem 5rem;
+  box-shadow: 0px 5.33333px 80px 0px rgba(0, 0, 0, 0.10);
+  color: var(--body);
+  transition: .4s;
+}
+
+.mobile-header-menu {
+  justify-content: space-between;
+  display: none;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 5vh;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+}
+
+.header-links {
+  display: flex;
+}
+
+.menu {
+  background: #fff;
+  width: 60px;
+  height: auto;
+}
+
+.hamburguer {
+  position: relative;
+  display: block;
+  background: #000;
+  width: 30px;
+  height: 4px;
+  transition: 0.25s ease-in-out;
+}
+
+.hamburguer:before,
+.hamburguer:after {
+  background: #000;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.25s ease-in-out;
+}
+
+.hamburguer:before {
+  top: -10px;
+}
+
+.hamburguer:after {
+  bottom: -10px;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ label .hamburguer {
+  transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+input:checked ~ label .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+.header-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 20vh;
+}
+
+.header-link {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  align-items: center; 
+}
+
+.header-link > a {
+  text-decoration: none;
+  color: var(--Body);
 }
 
 .logo {
@@ -370,16 +478,25 @@ footer {
   color: #2829388e;
 }
 @media (max-width:480px) {
+  .header {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+    padding: 1rem 2rem;
+  }
+
+  .mobile-header-menu {
+    display: flex;
+  }
+
   .logo {
     font-size: 1.5rem;
   }
 
   .link {
     display: none;
-  }
-
-  header {
-    padding: 1rem 2rem;
   }
 
   .contact{
@@ -428,6 +545,10 @@ footer {
     font-size: 1rem;
   }
 
+  .modal-content {
+    width: 80%;
+  }
+  
   .about-me {
     padding: 1rem 2rem;
   }
@@ -435,6 +556,7 @@ footer {
   .projects {
     padding: 1rem 2rem;
     height: auto;
+    margin-bottom: 10vh;
   }
   
   .projects-cards {
@@ -442,7 +564,7 @@ footer {
   }
 
   footer {
-    padding: 1rem 2rem;
+    display: none;
   }
 }
 
@@ -521,6 +643,7 @@ footer {
   footer {
     padding: 1.25rem 2.25rem;
   }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

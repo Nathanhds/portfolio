@@ -3,12 +3,14 @@ import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Introduction from "./components/Introduction";
 import Projects from "./components/Projects";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import MobileHeader from "./components/MobileHeader";
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      <Header />
+      <MobileHeader />
       <Introduction / >
       <Experience />
       <AboutMe />
