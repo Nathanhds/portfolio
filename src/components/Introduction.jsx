@@ -20,7 +20,7 @@ export default function Introduction() {
                         </a>
                     </div>
                 </div>
-                <img src="/sebrae-londrina-284-background-removed-1.svg" alt="Nathan" className="nathan"/>
+                <img src="/nathan-removebg-preview.png" alt="Nathan" className="nathan"/>
             </section>
     )
 }

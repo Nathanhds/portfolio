@@ -39,7 +39,7 @@
   left: 0;
   bottom: 0;
   position: fixed;
-  padding: 0rem 5rem;
+  padding:  1rem 0rem 1rem 2rem;
   box-shadow: 0px 5.33333px 80px 0px rgba(0, 0, 0, 0.10);
   color: var(--body);
   transition: .4s;
@@ -279,10 +279,17 @@ nav {
   padding: 2rem;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 2rem;
   border-radius: 0.6rem;
   background: var(--BG-Shade);
   width: 100%;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .card-title {
@@ -307,6 +314,9 @@ nav {
   background-color: transparent;
   border: none;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .experience-link:hover {
@@ -452,7 +462,6 @@ footer {
   border: none;
 }
 
-
 .modal-close:hover {
   cursor: pointer;
 }
@@ -465,6 +474,11 @@ footer {
   align-self: center;
   justify-content: space-between;
   flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.tech-title {
+  font-weight: 300;
 }
 
 .tech {
@@ -484,7 +498,6 @@ footer {
 
   .mobile-header {
     display: flex;
-    padding: 1rem 2rem;
   }
 
   .mobile-header-menu {
@@ -569,6 +582,18 @@ footer {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .header {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  .mobile-header-menu {
+    display: flex;
+  }
+
   .logo {
     font-size: 1.75rem;
   }
@@ -577,8 +602,13 @@ footer {
     display: none;
   }
 
-  header {
-    padding: 1.25rem 2.25rem;
+  .link {
+    display: flex;
+    font-size: 1rem;
+  }
+
+  .contact {
+    display: flex;
   }
 
   .contact {
@@ -647,6 +677,7 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   .logo {
     font-size: 2rem;
   }
@@ -655,12 +686,12 @@ footer {
     font-size: 1rem;
   }
 
-  header {
+  .header {
     padding: 1.5rem 2.5rem;
   }
 
   .contact {
-    padding: 1.25rem 2.25rem;
+    padding: 1rem 2rem;
   }
 
   .nathan {
@@ -736,7 +767,7 @@ footer {
     font-size: 1.25rem;
   }
 
-  header {
+  .header {
     padding: 1.75rem 2.75rem;
   }
 
@@ -817,7 +848,7 @@ footer {
     font-size: 1.5rem;
   }
 
-  header {
+  .header {
     padding: 2rem 3rem;
   }
 
